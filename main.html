@@ -4,12 +4,54 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+
+	<style>
+		.radio-container input[type="radio"] {
+			display: none;
+		}
+
+		.radio-container label {
+			display: inline-block;
+			padding: 5px 10px;
+			margin : 5px;
+			cursor: pointer;
+		}
+
+		.radio-container input[type="radio"].input + label {
+			color: black;
+		}
+
+		.radio-container input[type="radio"].input: nth-child(even) + label {
+			color: red;
+		}
+	</style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
+
+	<div class="radio-container">
+		<input type="radio" id="radio1" name="option" value="1" class="input">
+		<label for="radio1">Option 1</label><br>
+		
+		<input type="radio" id="radio2" name="option" value="2" class="input" disabled>
+		<label for="radio1">Option 2</label><br>
+		
+		<input type="radio" id="radio3" name="option" value="3" class="input" checked>
+		<label for="radio1">Option 3</label><br>
+		
+		<input type="radio" id="radio4" name="option" value="4" class="input">
+		<label for="radio1">Option 4</label><br>
+		
+		<input type="radio" id="radio5" name="option" value="5" class="input">
+		<label for="radio1">Option 5</label><br>
+		
+		<input type="radio" id="radio6" name="option" value="6" class="input">
+		<label for="radio1">Option 6</label><br>
+		
+	</div>
 
 </body>
 
