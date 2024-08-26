@@ -24,7 +24,7 @@
         }
 
         /* Color for even-positioned radio button labels */
-        .radio-container input:nth-of-type(even) + label {
+        .radio-container input:nth-of-type(2n) + label {
             color: red; /* Set color to red for even-positioned labels */
         }
 
@@ -39,7 +39,7 @@
         }
 
         /* Ensure that even-positioned selected radio buttons remain red */
-        .radio-container input:checked:nth-of-type(even) + label {
+        .radio-container input:checked:nth-of-type(2n) + label {
             color: red; /* Ensure selected even-positioned buttons stay red */
         }
     </style>
@@ -72,3 +72,5 @@
     </div>
 </body>
 </html>
+
+
