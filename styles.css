@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Buttons</title>
+    <title>Radio Button Example</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
         .input {
-            accent-color: red; /* Changes the color of even-positioned radio buttons */
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Style for disabled radio button */
+        input[type="radio"]:disabled + span {
+            color: gray;
+            text-decoration: line-through;
         }
     </style>
 </head>
 <body>
 
-    <form>
-        <label>
-            <input type="radio" name="options" value="Option 1"> Option 1
-        </label><br>
-        
-        <label>
-            <input type="radio" name="options" value="Option 2" disabled> Option 2
-        </label><br>
-        
-        <label>
-            <input type="radio" name="options" value="Option 3" checked> Option 3
-        </label><br>
-        
-        <label>
-            <input type="radio" class="input" name="options" value="Option 4"> Option 4
-        </label><br>
-        
-        <label>
-            <input type="radio" class="input" name="options" value="Option 5"> Option 5
-        </label><br>
-        
-        <label>
-            <input type="radio" name="options" value="Option 6"> Option 6
-        </label><br>
+    <h1>Select an Option</h1>
+    <form id="radioForm">
+        <label class="input"><input type="radio" name="options" value="1"> Option 1</label>
+        <label class="input"><input type="radio" name="options" value="2" disabled> <span>Option 2 (disabled)</span></label>
+        <label class="input"><input type="radio" name="options" value="3" checked> Option 3</label>
+        <label class="input"><input type="radio" name="options" value="4"> Option 4</label>
+        <label class="input"><input type="radio" name="options" value="5"> Option 5</label>
+        <label class="input"><input type="radio" name="options" value="6"> Option 6</label>
     </form>
 
 </body>
